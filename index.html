@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vanderbilt</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(180deg, #fce4ec, #dce7d3);
+      background-size: 100% 300%;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 0% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .main-container {
+      background-color: white;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #d7a7ab;
+      white-space: nowrap;
+    }
+
+    .navbar-brand span {
+      color: #9da98b;
+    }
+
+    .nav-link {
+      color: #7b8d76 !important;
+      margin-left: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .nav-link.active {
+      color: #a07f84 !important;
+      font-weight: bold;
+      border-bottom: 2px solid #c7aaa6;
+    }
+
+    h5 {
+      margin: 20px 0;
+      font-weight: bold;
+      color: #9ca68b;
+      text-align: center;
+      font-size: 1.25rem;
+    }
+
+    .image-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .image-card:hover {
+      transform: scale(1.02);
+    }
+
+    .image-card img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      font-size: 0.9rem;
+      color: #8a9577;
+      text-align: center;
+      margin-top: 8px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    footer {
+      font-size: 0.75rem;
+      text-align: right;
+      color: #b5b5b5;
+      margin-top: 30px;
+    }
+
+    .modal-header, .modal-footer {
+      border: none;
+    }
+
+    .modal-body {
+      font-family: 'Playfair Display', serif;
+      color: #6c6c6c;
+      font-size: 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .main-container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      nav.d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-brand {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+      }
+
+      .nav-link {
+        display: inline-block;
+        margin: 0 10px 5px 0;
+        font-size: 0.95rem;
+      }
+
+      h5 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+
+      .nav-link {
+        font-size: 0.9rem;
+      }
+
+      h5 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- Navbar -->
+    <nav class="d-flex justify-content-between align-items-center flex-wrap mb-4">
+      <div class="navbar-brand mb-2 mb-md-0">happy birthday, <span>baby</span></div>
+      <div>
+        <a href="#" class="nav-link active">home</a>
+        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#letterModal">letter</a>
+        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#belovedModal">my beloved</a>
+        <a href="#us" class="nav-link"><i class="bi bi-heart-fill me-1"></i>us</a>
+      </div>
+    </nav>
+
+    <!-- Title -->
+    <h5>may your day be filled with happiness</h5>
+
+    <!-- Image Grid -->
+    <div class="row g-3">
+      <div class="col-md-4 col-sm-6 col-12">
+        <div class="image-card">
+          <img src="gyu.jpg" alt="01">
+          <div class="image-caption">06</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12">
+        <div class="image-card">
+          <img src="jun.jpg" alt="02">
+          <div class="image-caption">18</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 col-12">
+        <div class="image-card">
+          <img src="hao.jpg" alt="03">
+          <div class="image-caption">2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- US Section -->
+    <section id="us" class="mt-5">
+      <div class="mb-4">
+        <h5 class="text-center mb-3">Us</h5>
+        <p class="text-center text-muted px-3">
+          in every memory we've made together is a treasure for me to keep. I wouldn't want to do life with anyone else.
+        </p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="first udp.jpg" alt="Us 1">
+            <div class="image-caption">our beginning</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="him.jpg" alt="Us 2">
+            <div class="image-caption">smiles & sunshine</div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="quirks.jpg" alt="Us 3">
+            <div class="image-caption">attitude baby</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="rhaevan.jpg" alt="Us 4">
+            <div class="image-caption">you and me</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="mine.jpg" alt="Us 5">
+            <div class="image-caption">all mine</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="hahacutiesomuch.jpg" alt="Us 6">
+            <div class="image-caption">his funny attitude</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="mysweetbaby.jpg" alt="Us 7">
+            <div class="image-caption">my sweet baby</div>
+          </div>
+        </div>
+                <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="our color.jpg" alt="Us 8">
+            <div class="image-caption">our fave color</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="date.jpg" alt="Us 9">
+            <div class="image-caption">roblox date</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="attitude.jpg" alt="Us 10">
+            <div class="image-caption">kisses</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="my person.jpg" alt="Us 11">
+            <div class="image-caption">my person</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="sitwu.jpg" alt="Us 12">
+            <div class="image-caption">forever</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="ANGCUTE.jpg" alt="Us 13">
+            <div class="image-caption">another attitude of his</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="enzo.jpg" alt="Us 14">
+            <div class="image-caption">my enzo</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="bf.jpg" alt="Us 15">
+            <div class="image-caption">my bf, always</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="me.jpg" alt="Us 16">
+            <div class="image-caption">I am still excited up until today</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="wan.jpg" alt="Us 17">
+            <div class="image-caption">one hundred streak with you</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-12">
+          <div class="image-card">
+            <img src="home.jpg" alt="Us 18">
+            <div class="image-caption">if home is a person, that would be you</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-4">
+      <div>2025 — from your wife, mazi.</div>
+    </footer>
+  </div>
+
+  <!-- Letter Modal -->
+  <div class="modal fade" id="letterModal" tabindex="-1" aria-labelledby="letterModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title" id="letterModalLabel">A Letter For You</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>baby,</p>
+          <p>first of all, I just wanna greet you a happy birthday. this is the second time that I get to celebrate your birthday together with you, and I am praying for many more birthdays with you. remember when I asked you before if you do not like celebrating birthdays, and as much as I want to respect your decision, I just can't sit idly by and prepare nothing for your birthday.</p>
+          <p>this kind of celebration only happens once in a year, and I want you to be happy during this time. because on this day, a man who is strong, smart, and kind-hearted was born — and that is you. I am very thankful that God gave me such a loving person as you. no words can describe how much you truly mean to me.</p>
+          <p>this is the first time I exerted this kind of effort for a man, and I am glad that it is you. alam ko you are not super okay sa birthday mo since y'know. but please, do not make yourself suffer that much. you did good and you did your best. you've also done your sacrifices, so please don't be too hard on yourself. I love you so damn much, baby.</p>
+          <p>all I want is for you to be happy and enjoy your day today. more birthdays to come and candle to blow, baby ko!</p>
+          <p>with all my love,<br>— your wife 💌</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Beloved Modal -->
+  <div class="modal fade" id="belovedModal" tabindex="-1" aria-labelledby="belovedModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-3">
+        <div class="modal-header">
+          <h5 class="modal-title" id="belovedModalLabel">My Beloved</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>typing these thoughts fills me with excitement—I cannot wait for you to read them. but I must hold myself back and wait for your special day to arrive… and that day is today. I’ve said this countless times: you are my answered prayer, my other half, my soulmate. you mean so much to me. If only these small hands of mine could give you your heart’s deepest desire, I would do so without hesitation. maybe we truly are meant for each other. just imagine how our paths crossed—especially through “chismis” where ourr first interaction and that led me to you. and still, I can’t believe I actually have you.</p>
+          <p>maybe the red string of fate really does work, even in online world. we didn’t have the most charming first impression—or at least, that’s how I felt. I didn’t like your pa-cold personality at first... but maybe that’s what made everything even more memorable in the end. your quirks, character, and personality captivates me so much. hindi ko alam before na unti-unti na pala me nahuhulog saiyo, just imagine how you can get someone's attention that easily. kung pwede kandaduhan na kita para hindi maagaw, hehe joke.</p>
+          <p>noong nalaman ko about your past, it made me mad. kasi bakit nakayanan nila gawin iyan saiyo, and at the same time naisip ko na if hindi naman nangyari iyon then maybe walang tayo. that won't still justify what they did. I will love you more than they loved you before.</p>
+          <p>I will always see you as my big baby, big pero batak magpa-baby. hala big... ay charot. they may see you as masungit but only I who knows your sweet and gentle side. i-gatekeep ko talaga iyan, dapat sa akin lang iyang side mo na iyan. I am madamot, I don't like sharing.</p>
+          <p>sorry not sorry but I think wala ka ng kawala sa akin. I love you, my baby!</p>
+          <p>once again, happy birthday, my beloved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
